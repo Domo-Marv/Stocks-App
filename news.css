@@ -23,7 +23,7 @@ header {
 
 nav {
   height: 100%;
-  width: 60%;
+  width: 59%;
   padding-left: 5%;
   display: flex;
   align-items: center;
@@ -57,3 +57,27 @@ nav ul {
   height: 40px;
   width: 40px;
 }
+
+/* form section */
+#search-form {
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-png {
+  height: 25px;
+  width: 25px;
+}
+
+.search-bar {
+  background-color: var(--secondary-color);
+  color: var(--third-color);
+  width: 20%;
+  border: none;
+  padding: 5px 13px;
+  border-radius: 13px;
+}
+
+/* main */
