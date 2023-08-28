@@ -2,14 +2,14 @@ const apiKey = myApiKey;
 
 //Route for news for ticker
 
-// const practice = async () => {
-//   const res = await fetch(
-//     `https://api.polygon.io/v2/reference/news?ticker=AAPL&apiKey=${apiKey}`
-//   );
-//   const data = await res.json();
-//   console.log(data);
-// };
-// practice();
+const practice = async () => {
+  const res = await fetch(
+    `https://api.polygon.io/v2/reference/news?ticker=AAPL&apiKey=${apiKey}`
+  );
+  const data = await res.json();
+  console.log(data);
+};
+practice();
 
 //route for ticker information
 
