@@ -1,4 +1,4 @@
-const apiKey = myApiKey;
+const apiKey = 'JYXJhoFpdKGiFhlJbvIupdDfoVYJwWur';
 
 
 const displayTickerInfo = async(ticker) => {
