@@ -1,11 +1,11 @@
-const apiKey = MYAPIKEY;
+const key = '4VTPWthDv8vSvrpnixAP6afcKWkIOeEX';
 
 //displaying 3 tickers
 const main = document.querySelector('.main');
 
 const displayTicker = async (ticker) => {
   const res = await fetch(
-    `https://api.polygon.io/v2/reference/news?ticker=${ticker}&apiKey=${apiKey}`
+    `https://api.polygon.io/v2/reference/news?ticker=${ticker}&apiKey=${key}`
   );
   const data = await res.json();
 
