@@ -1,5 +1,34 @@
 const apiKey = myApiKey;
 
+//displaying 3 tickers
+const main = document.querySelector('.main');
+
+const displayTicker = async (ticker) => {
+  const res = await fetch(
+    `https://api.polygon.io/v2/reference/news?ticker=${ticker}&apiKey=${myApiKey}`
+  );
+  const data = await res.json();
+
+  const div = document.createElement('div');
+  const h2 = document.createElement('h2');
+  const ol = document.createElement('ol');
+  div.className = 'card';
+  h2.textContent = ticker;
+
+  for (let i = 0; i < 3; i++) {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = data.results[i].amp_url;
+    a.textContent = data.results[i].amp_url;
+    li.append(a);
+    ol.append(li);
+  }
+  div.append(h2, ol);
+  main.append(div);
+};
+
+displayTicker('AAPL');
+
 //Route for news for ticker
 
 // const practice = async () => {
