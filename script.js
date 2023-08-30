@@ -1,11 +1,11 @@
-const key = '4VTPWthDv8vSvrpnixAP6afcKWkIOeEX';
+const applePie = '4VTPWthDv8vSvrpnixAP6afcKWkIOeEX';
 
 //displaying 3 tickers
 const main = document.querySelector('.main');
 
 const displayTicker = async (ticker) => {
   const res = await fetch(
-    `https://api.polygon.io/v2/reference/news?ticker=${ticker}&apiKey=${key}`
+    `https://api.polygon.io/v2/reference/news?ticker=${ticker}&apiKey=${applePie}`
   );
   const data = await res.json();
 
@@ -18,8 +18,8 @@ const displayTicker = async (ticker) => {
   for (let i = 0; i < 3; i++) {
     const li = document.createElement('li');
     const a = document.createElement('a');
-    a.href = data.results[i].amp_url;
-    a.textContent = data.results[i].amp_url;
+    a.href = data.results[i].article_url;
+    a.textContent = data.results[i].article_url;
     li.append(a);
     ol.append(li);
   }
@@ -28,6 +28,21 @@ const displayTicker = async (ticker) => {
 };
 
 displayTicker('AAPL');
+
+//search function
+
+const searchHandler = async (e) => {
+  e.preventDefault();
+  const searchTerm = e.target[0].value.toUpperCase();
+
+  displayTicker(searchTerm);
+
+  e.target.reset();
+};
+
+document
+  .querySelector('#search-form')
+  .addEventListener('submit', searchHandler);
 
 //Route for news for ticker
 
