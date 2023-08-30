@@ -134,8 +134,8 @@ a:link {
     padding-right: 2px;
   }
 
-  .card:hover {
-    scale: 1.2;
+  li {
+    font-size: 18px;
   }
 
   h2 {

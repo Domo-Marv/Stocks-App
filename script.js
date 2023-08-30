@@ -19,12 +19,13 @@ const displayTicker = async (ticker) => {
     const li = document.createElement('li');
     const a = document.createElement('a');
     a.href = data.results[i].article_url;
+    a.target = '_blank';
     a.textContent = data.results[i].article_url;
     li.append(a);
     ol.append(li);
   }
   div.append(h2, ol);
-  main.append(div);
+  main.prepend(div);
 };
 
 displayTicker('AAPL');
@@ -40,6 +41,7 @@ const searchHandler = async (e) => {
   e.target.reset();
 };
 
+//submit event listener
 document
   .querySelector('#search-form')
   .addEventListener('submit', searchHandler);
