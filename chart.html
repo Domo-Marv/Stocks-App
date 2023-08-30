@@ -11,7 +11,7 @@
     <header>
       <nav>
         <ul>
-          <li class="pages" id="cur-page">
+          <li class="pages">
             <a href="index.html"
               ><img
                 src="images/newspaper.png"
@@ -29,8 +29,8 @@
             /></a>
           </li>
 
-          <li class="pages">
-            <a href=""
+          <li class="pages" id="cur-page">
+            <a
               ><img
                 src="images/bar-chart.png"
                 alt="chart page png"
@@ -53,9 +53,16 @@
       </form>
     </section>
 
-    <main class="main"></main>
+    <main class="main">
+      <!-- <div class="card">
+        <h2></h2>
+        <canvas id="myChart"></canvas>
+      </div> -->
+    </main>
 
     <!-- script files -->
-    <script type="module" src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="chart.js"></script>
   </body>
 </html>
