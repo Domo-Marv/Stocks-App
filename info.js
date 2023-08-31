@@ -23,8 +23,9 @@ const displayTickerInfo = async(ticker) => {
     const imgTag = document.createElement('img');
     const linkTag = document.createElement('a');
     imgTag.src = icon;
-    imgTag.id = 'company-name'
+    imgTag.id = 'company-logo'
     linkTag.href = homepageLink;
+    linkTag.className = 'company-site'
     linkTag.target = "_blank";
     linkTag.append(imgTag);
     
