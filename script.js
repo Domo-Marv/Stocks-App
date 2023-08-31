@@ -3,6 +3,12 @@ const applePie = '4VTPWthDv8vSvrpnixAP6afcKWkIOeEX';
 //displaying 3 tickers
 const main = document.querySelector('.main');
 
+// const saveTicker = (ticker, val) => {
+//   localStorage.setItem(ticker, val);
+
+//   displayTicker(ticker);
+// };
+
 const displayTicker = async (ticker) => {
   const res = await fetch(
     `https://api.polygon.io/v2/reference/news?ticker=${ticker}&apiKey=${applePie}`
@@ -24,6 +30,10 @@ const displayTicker = async (ticker) => {
     li.append(a);
     ol.append(li);
   }
+  // div.addEventListener('click', () => {
+  //   saveTicker(ticker, div);
+  // });
+
   div.append(h2, ol);
   main.prepend(div);
 };
