@@ -26,6 +26,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px 0;
 }
 
 /* make gap smaller on smaller screens */
@@ -37,23 +38,38 @@ nav ul {
 
 .pages {
   height: 50px;
-  width: 50px;
+  width: 150px;
+  padding: 10px;
   background-color: var(--main-color);
   border-radius: 10px;
   border: 2px solid;
   cursor: pointer;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  color: var(--third-color);
 }
 
-#cur-page {
-  border-color: var(--third-color);
+#not-page {
+  border-color: black;
 }
 
 .pg-img {
   height: 40px;
   width: 40px;
+}
+
+a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--third-color);
+}
+
+a::after {
+  color: var(--third-color);
 }
 
 /* form section */
@@ -139,12 +155,17 @@ a:link {
   }
 }
 
+@media (max-width: 575px) {
+  .pages {
+    width: 110px;
+  }
+}
+
 @media (max-width: 550px) {
   .card {
-    padding: 20px 0px;
+    padding: 10px 0px;
     padding-left: 25px;
     padding-right: 2px;
-    width: 400px;
   }
 
   li {
@@ -154,5 +175,43 @@ a:link {
   h2 {
     padding-bottom: 20px;
     font-size: 26px;
+  }
+
+  .pg-img {
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: 460px) {
+  .card {
+    width: 400px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+
+  h2 {
+    padding-bottom: 15px;
+    font-size: 20px;
+  }
+  .pages {
+    width: 90px;
+  }
+
+  .pg-img {
+    height: 30px;
+    width: 30px;
+    padding-left: 3px;
+  }
+
+  nav ul {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 395px) {
+  .card {
+    width: 350px;
   }
 }
